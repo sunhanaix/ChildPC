@@ -1,0 +1,503 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1193</width>
+    <height>720</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QTableView" name="lstHosts">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>20</y>
+      <width>321</width>
+      <height>151</height>
+     </rect>
+    </property>
+    <property name="dragEnabled">
+     <bool>true</bool>
+    </property>
+    <property name="dragDropMode">
+     <enum>QAbstractItemView::NoDragDrop</enum>
+    </property>
+    <property name="selectionMode">
+     <enum>QAbstractItemView::SingleSelection</enum>
+    </property>
+    <property name="selectionBehavior">
+     <enum>QAbstractItemView::SelectRows</enum>
+    </property>
+    <attribute name="horizontalHeaderDefaultSectionSize">
+     <number>157</number>
+    </attribute>
+   </widget>
+   <widget class="QPushButton" name="btTTS">
+    <property name="geometry">
+     <rect>
+      <x>540</x>
+      <y>620</y>
+      <width>81</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>发消息给对方</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btCfgReset">
+    <property name="geometry">
+     <rect>
+      <x>510</x>
+      <y>500</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>重置配置</string>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="radNotKill">
+    <property name="geometry">
+     <rect>
+      <x>600</x>
+      <y>120</y>
+      <width>51</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>不杀</string>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="txtTimeout">
+    <property name="geometry">
+     <rect>
+      <x>530</x>
+      <y>40</y>
+      <width>42</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="minimum">
+     <number>1</number>
+    </property>
+    <property name="maximum">
+     <number>300</number>
+    </property>
+    <property name="value">
+     <number>30</number>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="txtInterval">
+    <property name="geometry">
+     <rect>
+      <x>530</x>
+      <y>10</y>
+      <width>42</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="minimum">
+     <number>1</number>
+    </property>
+    <property name="maximum">
+     <number>300</number>
+    </property>
+    <property name="value">
+     <number>30</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_10">
+    <property name="geometry">
+     <rect>
+      <x>340</x>
+      <y>160</y>
+      <width>111</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>临时放开管控时段：</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="txtSnapdir">
+    <property name="geometry">
+     <rect>
+      <x>160</x>
+      <y>500</y>
+      <width>301</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>snap</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btHide">
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>560</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>隐藏运行</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_9">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>340</y>
+      <width>121</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>需要监控的浏览器：</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btRun">
+    <property name="geometry">
+     <rect>
+      <x>160</x>
+      <y>560</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>开始</string>
+    </property>
+   </widget>
+   <widget class="QListView" name="lstBrowsers">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>360</y>
+      <width>251</width>
+      <height>121</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btQuit">
+    <property name="geometry">
+     <rect>
+      <x>370</x>
+      <y>560</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>退出</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_8">
+    <property name="geometry">
+     <rect>
+      <x>340</x>
+      <y>340</y>
+      <width>121</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>浏览器关键词黑名单：</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>0</y>
+      <width>371</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>管控电脑地址列表（会按照从上到下的顺序，找到第一个可以连通的）</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_7">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>500</y>
+      <width>151</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>抓取图片和录音存放路径：</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btBrowse">
+    <property name="geometry">
+     <rect>
+      <x>460</x>
+      <y>500</y>
+      <width>41</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>浏览</string>
+    </property>
+   </widget>
+   <widget class="QListView" name="lstBlacklist">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>200</y>
+      <width>251</width>
+      <height>121</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>420</x>
+      <y>40</y>
+      <width>101</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>超时设置（秒）：</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>420</x>
+      <y>10</y>
+      <width>101</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>轮询间隔（秒）：</string>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="txtSeconds">
+    <property name="geometry">
+     <rect>
+      <x>530</x>
+      <y>70</y>
+      <width>42</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="minimum">
+     <number>1</number>
+    </property>
+    <property name="maximum">
+     <number>300</number>
+    </property>
+    <property name="value">
+     <number>10</number>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="radKill">
+    <property name="geometry">
+     <rect>
+      <x>600</x>
+      <y>100</y>
+      <width>41</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>杀</string>
+    </property>
+    <property name="checked">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QGroupBox" name="gridGroupBox">
+    <property name="geometry">
+     <rect>
+      <x>-10</x>
+      <y>590</y>
+      <width>641</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout"/>
+   </widget>
+   <widget class="QLabel" name="label_5">
+    <property name="geometry">
+     <rect>
+      <x>360</x>
+      <y>110</y>
+      <width>241</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>发现黑名单程序和浏览违禁词时，是否杀掉：</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>180</y>
+      <width>81</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>程序黑名单：</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_6">
+    <property name="geometry">
+     <rect>
+      <x>420</x>
+      <y>70</y>
+      <width>101</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>录音时长（秒）：</string>
+    </property>
+   </widget>
+   <widget class="QListView" name="lstKeywords">
+    <property name="geometry">
+     <rect>
+      <x>340</x>
+      <y>360</y>
+      <width>291</width>
+      <height>121</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btUpdate">
+    <property name="geometry">
+     <rect>
+      <x>590</x>
+      <y>500</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>更新配置</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="ckAutoStart">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>560</y>
+      <width>101</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>开机自动启动</string>
+    </property>
+   </widget>
+   <widget class="QPlainTextEdit" name="txtMsg">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>600</y>
+      <width>521</width>
+      <height>61</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QTableView" name="lstPeriods">
+    <property name="geometry">
+     <rect>
+      <x>340</x>
+      <y>180</y>
+      <width>301</width>
+      <height>151</height>
+     </rect>
+    </property>
+    <property name="selectionBehavior">
+     <enum>QAbstractItemView::SelectRows</enum>
+    </property>
+   </widget>
+   <widget class="QGroupBox" name="groupBox">
+    <property name="geometry">
+     <rect>
+      <x>680</x>
+      <y>20</y>
+      <width>501</width>
+      <height>651</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>程序执行状态日志信息:</string>
+    </property>
+    <widget class="QTextEdit" name="txtStatus">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>481</width>
+       <height>621</height>
+      </rect>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Sunken</enum>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+     <property name="tabStopDistance">
+      <double>80.000000000000000</double>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1193</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu_H">
+    <property name="title">
+     <string>帮助(&amp;H)</string>
+    </property>
+    <addaction name="mnAbout"/>
+   </widget>
+   <addaction name="menu_H"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="mnAbout">
+   <property name="text">
+    <string>关于(&amp;A)</string>
+   </property>
+  </action>
+  <action name="mnFeedback">
+   <property name="text">
+    <string>建议反馈(&amp;F)</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
